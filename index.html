@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task15</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans|Cairo|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #eee;
+      }
+
+      .select-box {
+        padding: 0;
+        margin: 0;
+        background-color: #ddd;
+        margin: 20px auto;
+        padding: 20px;
+        width: 400px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .select-box option {
+        width: 60px;
+        height: 60px;
+        border: 2px solid transparent;
+        opacity: 0.4;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .select-box option.active,
+      .select-box option:hover {
+        opacity: 1;
+      }
+
+      .output p {
+        text-align: center;
+        font-size: 30px;
+        color: black;
+      }
+
+      #output-text {
+        font-family: "Open Sans", sans-serif; /* تعيين الخط "Open Sans" */
+      }
+      input {
+        padding: 10px 50px;
+      }
+      .add {
+        background-color: #d04848;
+        color: white;
+        border: none;
+        padding: 12px 50px;
+        border-radius: 10px;
+      }
+      .tasks {
+        margin-top: 20px;
+        width: 355px;
+        padding: 30px;
+        background-color: burlywood;
+        border-radius: 10px;
+        font-size: 30px;
+      }
+      button {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 12px 32px;
+        border-radius: 10px;
+        margin-left: 60%;
+        transform: translateY(-39px);
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="select-box">
+      <label for="font-select">Font:</label>
+      <select id="font-select">
+        <option
+          class="active"
+          value="Open Sans"
+          style="font-family: 'Open Sans', sans-serif"
+        >
+          Open Sans
+        </option>
+        <option value="Cairo" style="font-family: 'Cairo', sans-serif">
+          Cairo
+        </option>
+        <option value="Roboto" style="font-family: 'Roboto', sans-serif">
+          Roboto
+        </option>
+      </select>
+    </div>
+    <div class="select-box">
+      <label for="color-select">Color:</label>
+      <select id="color-select">
+        <option class="active" value="#000000">Black</option>
+        <option value="#ff0000">Red</option>
+        <option value="#00ff00">Green</option>
+        <option value="#0000ff">Blue</option>
+        <option value="#ffff00">Yellow</option>
+        <option value="#ff00ff">Magenta</option>
+      </select>
+    </div>
+
+    <div class="select-box">
+      <label for="size-select">Size:</label>
+      <select id="size-select">
+        <option class="active" value="16">16</option>
+        <option value="18">18</option>
+        <option value="20">20</option>
+        <option value="22">22</option>
+        <option value="24">24</option>
+        <option value="26">26</option>
+        <option value="28">28</option>
+        <option value="30">30</option>
+      </select>
+    </div>
+
+    <div class="output">
+      <p id="output-text">Zainab</p>
+    </div>
+
+    <form action="">
+      <input type="text" class="name" />
+      <br />
+      <input type="text" class="name" />
+      <br />
+      <input type="email" class="name" />
+    </form>
+    <div class="select-box">
+      <label for="size-select">Size:</label>
+      <select id="size-select">
+        <option class="active" value="16">16</option>
+        <option value="18">18</option>
+        <option value="20">20</option>
+        <option value="22">22</option>
+        <option value="24">24</option>
+        <option value="26">26</option>
+        <option value="28">28</option>
+        <option value="30">30</option>
+      </select>
+    </div>
+
+    <!-- challenge -->
+    <div class="contaier">
+      <div class="form">
+        <input type="text" class="input" />
+        <input type="submit" class="add" value="Add Task" />
+      </div>
+      <div class="tasks"></div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="challenge.js"></script>
+  </body>
+</html>
